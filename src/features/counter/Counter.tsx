@@ -10,9 +10,11 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 //import { useAppDispatch, useAppSelector } from "../../app/hooks";
 
 export function Counter() {
-  //state에 저장된 카운터값을 추출
+  // state에 저장된 카운터값을 추출
   const count = useAppSelector((state) => state.counter.value);
-  //dispath를 가져
+  
+  // dispath를 가져와서 배치
+  // 이벤트처리시 사용됨을 확인됨
   const dispatch = useAppDispatch();
 
   const [incrementAmount, setIncrementAmount] = useState("2");
