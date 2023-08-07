@@ -12,10 +12,12 @@ const initialState: CounterState = {
   value: 0,
 };
 
+// 이름에서 그의미를 찾기가 애매모호함이 있다
 export const counterSlice = createSlice({
   name: "counter",
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
+  // 메소드 정의하는 구현부
   reducers: {
     increment: (state) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
@@ -30,6 +32,8 @@ export const counterSlice = createSlice({
     },
     // Use the PayloadAction type to declare the contents of `action.payload`
     incrementByAmount: (state, action: PayloadAction<number>) => {
+      // payload를 통하여 특정값을 추출
+      // 많은값을 요구할 경우는 어떻게 가져오는지 확인이 필요
       state.value += action.payload;
     },
   },
