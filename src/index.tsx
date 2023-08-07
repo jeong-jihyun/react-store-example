@@ -9,8 +9,13 @@ import { Provider } from "react-redux";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+// 앱시작점
 root.render(
   <React.StrictMode>
+    {
+        // Provider store 사용
+    }
     <Provider store={store}>
       <App />
     </Provider>
